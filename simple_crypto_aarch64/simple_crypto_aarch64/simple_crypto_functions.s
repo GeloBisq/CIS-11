@@ -22,7 +22,7 @@ EN_WHL_X19_LT_X1:
 	// step #6_en - load byte into register W4, the contents of X0[X19]
 	// step #7_en - load byte into register W5, the contents of X2[X18]
 	// step #8_en - exclusive or W4 and W5, storing result in W4
-	// step #9_en - use bitwise AND with X19 and #255 to cast X19's value as char instead of int, store in W4
+	// step #9_en - use bitwise AND with X19 and #255 to cast X19's value as char instead of int, store in W5
 	// step #10_en - add W4 and W5, storing result in W4
 	// step #11_en - store byte in W4 to X0[X19]
 	// step #12_en - increment X18 by one
@@ -59,7 +59,7 @@ DE_WHL_X19_LT_X1:
 	// step #4_de - compare X19 and X1 in this order of the registers
 	// step #5_de - if X19 greater than or equal to X1, branch to DE_END_WHL_X19_LT_X1
 	// step #6_de - load byte into register W4, the contents of X0[X19]
-	// step #7_de - use bitwise AND with X19 and #255 to cast X19's value as char instead of int, store in W4
+	// step #7_de - use bitwise AND with X19 and #255 to cast X19's value as char instead of int, store in W5
 	// step #8_de - subtract W4 and W5, storing result in W4
 	// step #9_de - load byte into register W5, the contents of X2[X18]
 	// step #10_de - exclusive or W4 and W5, storing result in W4
